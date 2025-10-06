@@ -1,0 +1,18 @@
+workflows:
+  android-demo-workflow:
+    name: Mobiquity One Demo Build
+    max_build_duration: 30
+    environment:
+      android:
+        java: 17
+    scripts:
+      - name: Build APK
+        script: |
+          ./gradlew clean
+          ./gradlew assembleDebug
+    artifacts:
+      - app/build/outputs/apk/debug/app-debug.apk
+    publishing:
+      email:
+        recipients:
+          - satyajit.patnaik.demo@example.com

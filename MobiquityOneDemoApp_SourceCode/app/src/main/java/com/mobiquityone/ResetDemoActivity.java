@@ -1,0 +1,1 @@
+/* ResetDemoActivity source code here */
